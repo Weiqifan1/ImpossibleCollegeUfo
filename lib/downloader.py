@@ -1,14 +1,31 @@
 
 # download the file and change it to a panda dataset
 
-"""
-Downloads a file and returns it to main.py.
-Usage:
-    python main.py [<url>] 
-    or
-    python main.py [<url>] [<file_name>]
-"""
 
+import requests
+import os.path
+import sys
+
+def downloader(URL, file_name):
+    """Download file from URL and save to file_name if not already present. If present, do nothing."""
+
+    if not os.path.isfile(file_name):
+
+        try:
+            print("Downloading file...")
+            response = requests.get(URL)
+            as_string = response.text
+
+            with open(file_name, 'w', encoding='utf8', newline='') as the_file:
+                the_file.write(as_string)
+        except Exception as e:
+            print("Error downloading file; ", e)
+            sys.exit(1)
+        print("File downloaded.")
+
+
+# old downloader
+'''
 import os
 import sys
 from urllib import request as req
@@ -46,3 +63,4 @@ def download_file():
 
     download(url, file_name)
     return file_name
+'''
