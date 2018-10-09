@@ -21,20 +21,22 @@ if __name__ == "__main__":
             sys.exit(1)
 
     # download file from given url as file_name
-    downloader(url, file_name)
+    #downloader(url, file_name)
 
-    #movies_metadata = pd.read_csv(file_name, low_memory=False)
+    #movies_metadata = pd.read_csv(file_name, low_memory=False, error_bad_lines=False)
     
+    #pd.read_csv(file_name,  sep=',', delimiter=None, header= None, low_memory=False, error_bad_lines=False)
+
     #data = csv.reader(file_name)
     #data = pd.read_csv(file_name, sep=',',usecols=[0, 2, 3, 7, 8, 9, 10], low_memory=False) 
     #usecols=[0, 2, 3, 7, 8, 9, 10]
 
-    data = pd.read_csv(file_name,  sep=',', header=None, nrows=11, error_bad_lines=False) 
-    
+    data = pd.read_csv(file_name,  engine='python', sep= 'default', header=None, error_bad_lines=False) 
+    # nrows=11, 
 
+    print(data.info())
 
-    print(data[1:30])
-
+    #help(pd.read_csv)
 
 
 
