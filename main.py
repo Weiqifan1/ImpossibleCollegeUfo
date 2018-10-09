@@ -1,5 +1,6 @@
 """ 
-The url to run this program use this url:  https://raw.githubusercontent.com/MikkelHansen95/dataset/master/movies_metadata.csv
+The url to run this program use this url:
+https://raw.githubusercontent.com/planetsig/ufo-reports/master/csv-data/ufo-scrubbed-geocoded-time-standardized.csv
 """
 import utility.downloader as downloader
 import utility.convert_csv as convert_csv
@@ -17,7 +18,8 @@ pd.set_option('display.max_columns', None)
 
 # Til test
 def first(data):
-    print(data[0:1])
+    print(data.columns)
+    print(data.info())
 
 
 first(data)

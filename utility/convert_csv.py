@@ -7,8 +7,10 @@ def convert_csv_to_dataframe(file_name):
     When it's done it change the date to a date time object and some of the columns to integers.
     '''
     # Returneres som en dataframe.
-    # low_memory=False because column 10 has mixed datatypes.
-    data = pd.read_csv(file_name, sep=',', header=None)
+    # low_memory=False because column 5 and 9 has mixed datatypes.
+    data = pd.read_csv(file_name, sep=',', header=None, low_memory=False, names=[
+                       "date_time", "city", "state", "country", "shape", "duration_secounds",
+                       "duration_minutes", "comments", "date_posted", "latitude", "longitude"])
 
 # , usecols=[0, 2, 3, 7, 8, 9, 10, 14, 15, 16]
 
