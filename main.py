@@ -17,9 +17,12 @@ data = convert_csv.convert_csv_to_dataframe(file_name)
 pd.set_option('display.max_columns', None)
 
 # Til test
+
+
 def first(data):
-    print(data.columns)
+    # print(data.columns)
     print(data.info())
+    # print(data)
 
 
 first(data)
