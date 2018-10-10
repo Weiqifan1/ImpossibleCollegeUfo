@@ -2,9 +2,11 @@
 The url to run this program use this url:
 https://raw.githubusercontent.com/planetsig/ufo-reports/master/csv-data/ufo-scrubbed-geocoded-time-standardized.csv
 """
+
+import pandas as pd
 import utility.downloader as downloader
 import utility.convert_csv as convert_csv
-import pandas as pd
+import library.most_ufo_sightings as sights
 
 # Udkommenteret mens vi udvikler
 """ if __name__ == '__main__':
@@ -24,8 +26,9 @@ pd.set_option('display.max_columns', None)
 # Til test
 def first(data):
     # print(data.columns)
-    print(data.info())
+    #print(data.info())
     # print(data)
+    sights.find_state(data)
 
 
 first(data)
