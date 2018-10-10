@@ -13,7 +13,7 @@ def convert_csv_to_dataframe(file_name):
 
     # Convert string to datetime
     # SKAL INDKOMMENTERES NÅR VI SKAL ARBEJDE MED DATOER!!!
-    #data['date_time'] = pd.to_datetime(data['date_time'], errors='coerce')
+    data['date_time'] = pd.to_datetime(data['date_time'], errors='coerce')
 
     # Convert string to int. to_numeric converts to float. fillna sets empty values to 0.
     # MIXED DATA TYPES!
