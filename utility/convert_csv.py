@@ -12,9 +12,10 @@ def convert_csv_to_dataframe(file_name):
                        "date_time", "city", "state", "country", "shape", "duration_secounds", "comments", "latitude", "longitude"])
 
     # Convert string to datetime
-    data['date_time'] = pd.to_datetime(data['date_time'], errors='coerce')
+    # SKAL INDKOMMENTERES NÅR VI SKAL ARBEJDE MED DATOER!!!
+    #data['date_time'] = pd.to_datetime(data['date_time'], errors='coerce')
 
-    # Convert string to int. to_numeric converts to float. fillna sets empty values to 0. 
+    # Convert string to int. to_numeric converts to float. fillna sets empty values to 0.
     # MIXED DATA TYPES!
     data['duration_secounds'] = pd.to_numeric(
         data['duration_secounds'], errors='coerce').fillna(0).astype(int)
