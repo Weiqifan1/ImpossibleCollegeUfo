@@ -8,6 +8,7 @@ import utility.downloader as downloader
 import utility.convert_csv as convert_csv
 import library.sightings_over_time as sightings
 import library.most_ufo_sightings as sights
+import library.most_sightings_monthly as monthly_sightings
 
 
 # Udkommenteret mens vi udvikler
@@ -23,6 +24,7 @@ data = convert_csv.convert_csv_to_dataframe(file_name)
 
 print(sightings.ufo_sightings_over_time(data))
 sights.find_state(data)
+print(monthly_sightings.ufo_sightings_monthly(data))
 
 # Gør at vi kan printe all kolonner.
 #pd.set_option('display.max_columns', None)
