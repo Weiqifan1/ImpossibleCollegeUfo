@@ -12,15 +12,16 @@ import library.most_sightings_monthly as monthly_sightings
 import library.ufolook as look
 import library.minutes as sight_min
 import library.weekdays as week
+import library.usa_map_sightings as usa_map
+
 
 # Udkommenteret mens vi udvikler
-""" if __name__ == '__main__':
+if __name__ == '__main__':
     global file_name
-    file_name = downloader.download_file() """
-
+    file_name = downloader.download_file() 
 
 # Fjernes når vi aflever.
-file_name = 'ufo-scrubbed-geocoded-time-standardized.csv'
+#file_name = 'ufo-scrubbed-geocoded-time-standardized.csv'
 
 data = convert_csv.convert_csv_to_dataframe(file_name)
 
@@ -30,6 +31,7 @@ sights.find_state(data)
 look.ufolook(data)   # note, der er endnu ikke lavet textblob analyse
 sight_min.ufo_minutes(data)
 week.week_graf(data)
+print(usa_map.usa_map_sightings(data))
 print("end")
 
 
