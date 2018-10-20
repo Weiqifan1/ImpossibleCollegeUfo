@@ -10,6 +10,8 @@ import os
 import sys
 from urllib import request as req
 
+# TODO: https://towardsdatascience.com/be-a-more-efficient-data-scientist-today-master-pandas-with-this-guide-ea362d27386
+
 
 def download(from_url, to_file):
     if not os.path.isfile(to_file):

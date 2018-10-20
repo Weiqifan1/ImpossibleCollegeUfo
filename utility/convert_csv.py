@@ -8,11 +8,15 @@ def convert_csv_to_dataframe(file_name):
     '''
     # Returneres som en dataframe.
     # low_memory=False because column 5 and 9 has mixed datatypes.
+    # chunksize = Reads 500 lines ad gange.  
+    print("Downloading file...")  
     data = pd.read_csv(file_name, sep=',', header=None, low_memory=False, usecols=[0, 1, 2, 3, 4, 5, 7, 9, 10], names=[
                        "date_time", "city", "state", "country", "shape", "duration_secounds", "comments", "latitude", "longitude"])
 
+    print("File is downloaded.")
     # Convert string to datetime
     # SKAL INDKOMMENTERES NÅR VI SKAL ARBEJDE MED DATOER!!!
+    print("Convert dates to datetime objects. It is going to take some time...")
     data['date_time'] = pd.to_datetime(data['date_time'], errors='coerce')
 
     # Convert string to int. to_numeric converts to float. fillna sets empty values to 0.
