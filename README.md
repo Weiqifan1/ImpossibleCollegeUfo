@@ -20,6 +20,7 @@ https://raw.githubusercontent.com/planetsig/ufo-reports/master/csv-data/ufo-scru
 ## Dependencies
 The project use dependencies which is part of Pythons Anaconda installation and TextBlob.  
 Install TextBlob with: pip install -U textblob  
+Instal folium with: pip install folium  
 
 ## Results
 #### Which place are there most UFO sightings?  
