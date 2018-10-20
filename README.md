@@ -29,7 +29,7 @@ California has 9655 UFO sightings in total (state).
 #### How have the UFO sightings evoled over time (It's fine to answer this question with a plot)?  
 Make the image wider to better see the dates when you have cloned the repository.  
 
-![alt text](https://github.com/Weiqifan1/ImpossibleCollegeUfo/blob/developer/sightings_over_time.png width="150")  
+![alt text](https://github.com/Weiqifan1/ImpossibleCollegeUfo/blob/developer/sightings_over_time.png {:width="150"})  
 
 #### Which time of the year are there most UFO sightings?  
 July has the most UFO sightings.  
