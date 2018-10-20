@@ -27,9 +27,9 @@ Seattle has 525 UFO sightings in total (city).
 California has 9655 UFO sightings in total (state).  
 
 #### How have the UFO sightings evoled over time (It's fine to answer this question with a plot)?  
-Make the image wider or zoom in to better see the dates.  
+Make the image wider to better see the dates when you have cloned the repository.  
 
-![alt text](https://github.com/Weiqifan1/ImpossibleCollegeUfo/blob/developer/sightings_over_time.png)  
+![alt text](https://github.com/Weiqifan1/ImpossibleCollegeUfo/blob/developer/sightings_over_time.png | width=100)  
 
 #### Which time of the year are there most UFO sightings?  
 July has the most UFO sightings.  
