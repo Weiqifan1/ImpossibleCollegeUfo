@@ -21,7 +21,6 @@ def _float_to_day(float_list):
     return [weekdays[i] for i in index]
 
 
-
 def _save_piechart(valuelist, keylist):
     ufopie = plt.subplot()
     ufopie.pie(valuelist, labels=tuple(keylist), autopct='%1.2f',
@@ -48,3 +47,4 @@ def _get_keys_from_values(value_list, dict):
         key = [k for k,v in dict.items() if v == value]
         keylist.append(key[0])
     return keylist
+    

@@ -25,5 +25,4 @@ def usa_map_sightings(data):
                    fill_color='YlGn', fill_opacity=0.7, line_opacity=0.2,
                    legend_name='Number of UFO per State')
 
-
-map
+    map

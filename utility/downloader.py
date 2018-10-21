@@ -11,10 +11,6 @@ import sys
 from urllib import request as req
 from tqdm import tqdm
 
-# For a downloading bar
-# import requests
-# file_size = int(requests.head(from_url).headers["Content-Length"])
-# for row in tqdm(file_name, total = file_size):
 
 def download(from_url, to_file):
     
@@ -49,3 +45,4 @@ def download_file():
 
     download(url, file_name)
     return file_name
+    

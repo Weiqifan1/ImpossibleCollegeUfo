@@ -15,13 +15,9 @@ import library.weekdays as week
 import library.usa_map_sightings as usa_map
 
 
-# Udkommenteret mens vi udvikler
 if __name__ == '__main__':
     global file_name
     file_name = downloader.download_file() 
-
-# Fjernes når vi aflever.
-#file_name = 'ufo-scrubbed-geocoded-time-standardized.csv'
 
 data = convert_csv.convert_csv_to_dataframe(file_name)
 
@@ -32,19 +28,3 @@ look.ufolook(data)   # note, der er endnu ikke lavet textblob analyse
 sight_min.ufo_minutes(data)
 week.week_graf(data)
 print(usa_map.usa_map_sightings(data))
-print("end")
-
-
-# Gør at vi kan printe all kolonner.
-#pd.set_option('display.max_columns', None)
-
-# Til test
-# def first(data):
-# print(data.columns)
-
-# print(data.info())
-
-# print(data)
-
-
-# first(data)

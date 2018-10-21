@@ -10,13 +10,12 @@ def convert_csv_to_dataframe(file_name):
     # Returneres som en dataframe.
     # low_memory=False because column 5 and 9 has mixed datatypes.
     print('Convert csv file to a dataFrame.')
-    for row in tqdm(file_name, total=len(file_name)):
+    for row in tqdm(file_name, total=len(file_name)): # For the progress bar.
         data = pd.read_csv(file_name, sep=',', header=None, low_memory=False, usecols=[0, 1, 2, 3, 4, 5, 7, 9, 10], names=[
                        "date_time", "city", "state", "country", "shape", "duration_secounds", "comments", "latitude", "longitude"])
     
     # Convert string to datetime
-    # SKAL INDKOMMENTERES NÅR VI SKAL ARBEJDE MED DATOER!!!
-    # iterrows = iterate through DataFrame's row
+    # iterrows = iterate through DataFrame's row for the progress bar.
     print('Convert date to datetime object.')
     for index, row in tqdm(data.iterrows(), total = len(data.index)): 
         data['date_time'] = pd.to_datetime(data['date_time'], errors='coerce')
@@ -32,12 +31,5 @@ def convert_csv_to_dataframe(file_name):
     # We use fillna(0) to replace NaN with 0 so we can convert to float.
     data['latitude'] = pd.to_numeric(
         data['latitude'], errors='coerce').fillna(0).astype(float)
-
-    # data['longitude'] = pd.to_numeric(
-    #  data['longitude'], errors='coerce').fillna(0).astype(int)
-
-    # Convert string to int and replace .
-    # data['popularity'] = pd.to_numeric(data['popularity'].str.replace(
-    #    '.', ''), errors='coerce').fillna(0).astype(int)
 
     return data
