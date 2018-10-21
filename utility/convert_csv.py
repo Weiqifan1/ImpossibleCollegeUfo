@@ -33,11 +33,4 @@ def convert_csv_to_dataframe(file_name):
     data['latitude'] = pd.to_numeric(
         data['latitude'], errors='coerce').fillna(0).astype(float)
 
-    # data['longitude'] = pd.to_numeric(
-    #  data['longitude'], errors='coerce').fillna(0).astype(int)
-
-    # Convert string to int and replace .
-    # data['popularity'] = pd.to_numeric(data['popularity'].str.replace(
-    #    '.', ''), errors='coerce').fillna(0).astype(int)
-
     return data

@@ -3,12 +3,9 @@ import matplotlib.pyplot as plt
 
 
 def ufo_sightings_over_time(data):
-    # TODO: Remove the 0 from the list.
 
     count = data['date_time'].groupby(
         [data['date_time'].dt.year.rename('Year').fillna(0).astype(int)]).count()
-
-    # print(count)
 
     count.plot(kind='bar')
 
@@ -16,12 +13,11 @@ def ufo_sightings_over_time(data):
     ax = count.plot()
     plt.xticks(rotation=45)
     ax.set_title('UFO Sightings Over Time')
-    # ax.legend(loc='upper center')
     ax.set_ylabel('Number of Sightings')
     ax.grid(False)  # Get som space just below 0 on x axe.
 
     fig = ax.get_figure()
 
-    # TODO: Save file in png folder.
+    # Save file.
     fig.savefig(plot_file)
-    # plt.show()
+    plt.show()

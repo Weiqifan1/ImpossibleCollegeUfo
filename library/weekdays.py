@@ -4,7 +4,6 @@ import matplotlib.pyplot as plt
 import math
 
 def week_graf(data):
-    print("weekday")
 
     daylist = data['date_time'].dt.dayofweek.tolist()
     daydict = _enumerate(daylist)

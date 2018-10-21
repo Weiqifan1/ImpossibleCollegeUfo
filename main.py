@@ -15,7 +15,6 @@ import library.weekdays as week
 import library.usa_map_sightings as usa_map
 
 
-# Udkommenteret mens vi udvikler
 if __name__ == '__main__':
     global file_name
     file_name = downloader.download_file() 
