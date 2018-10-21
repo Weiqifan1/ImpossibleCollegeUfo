@@ -18,10 +18,11 @@ https://raw.githubusercontent.com/planetsig/ufo-reports/master/csv-data/ufo-scru
 5. python main.py [<url_to_dataset>]  
 
 ## Dependencies
-The project use dependencies which is part of Pythons Anaconda installation and TextBlob.  
-Install TextBlob with: pip install -U textblob  
-Instal folium with: pip install folium  
-Install tqdm with: pip install tqdm
+The project use dependencies which is part of Pythons Anaconda installation and the following 3 dependencies.  
+
+pip install -U textblob  
+pip install folium  
+pip install tqdm
 
 ## Results
 #### Which place are there most UFO sightings?  
@@ -49,7 +50,7 @@ Which days are most likely to see a UFO?
 x is monday to sunday.  
 y is 1 to 0.  
 
-![alt text](https://github.com/Weiqifan1/ImpossibleCollegeUfo/blob/developer/Ufo_week_days.png)
+![alt text](https://github.com/Weiqifan1/ImpossibleCollegeUfo/blob/0848952f9b68add12a6b6d81bae3cfac3526139f/Ufo_week_days.png)
 
 #### Plot 2.  
 Make a graph with polarity and sentiment.  
