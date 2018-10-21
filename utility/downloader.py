@@ -9,11 +9,17 @@ Usage:
 import os
 import sys
 from urllib import request as req
+from tqdm import tqdm
 
+# For a downloading bar
+# import requests
+# file_size = int(requests.head(from_url).headers["Content-Length"])
+# for row in tqdm(file_name, total = file_size):
 
 def download(from_url, to_file):
+    
     if not os.path.isfile(to_file):
-        req.urlretrieve(from_url, to_file)
+       req.urlretrieve(from_url, to_file)
 
 
 def download_file():
