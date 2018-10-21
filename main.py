@@ -27,4 +27,4 @@ sights.find_state(data)
 look.ufolook(data)   # note, der er endnu ikke lavet textblob analyse
 sight_min.ufo_minutes(data)
 week.week_graf(data)
-print(usa_map.usa_map_sightings(data))
+#print(usa_map.usa_map_sightings(data))

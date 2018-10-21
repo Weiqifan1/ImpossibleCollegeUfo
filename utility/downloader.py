@@ -9,13 +9,11 @@ Usage:
 import os
 import sys
 from urllib import request as req
-from tqdm import tqdm
 
 
 def download(from_url, to_file):
-    
     if not os.path.isfile(to_file):
-       req.urlretrieve(from_url, to_file)
+        req.urlretrieve(from_url, to_file)
 
 
 def download_file():
@@ -45,4 +43,3 @@ def download_file():
 
     download(url, file_name)
     return file_name
-    
