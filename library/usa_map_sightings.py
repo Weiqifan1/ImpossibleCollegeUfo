@@ -1,4 +1,4 @@
-import pandas as pd
+""" import pandas as pd
 import utility.downloader as downloader
 import folium as folium
 import json
@@ -26,4 +26,4 @@ def usa_map_sightings(data):
                    legend_name='Number of UFO per State')
 
 
-map
+map """
