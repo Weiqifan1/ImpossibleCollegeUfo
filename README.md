@@ -57,6 +57,11 @@ Make a graph with polarity and sentiment.
 x in the plot is index with sightings.  
 y in the plot is 0 to 1.  
 
+![alt text](https://github.com/Weiqifan1/ImpossibleCollegeUfo/blob/developer/sentiment.png)  
+
+![alt text](https://github.com/Weiqifan1/ImpossibleCollegeUfo/blob/developer/sentiment2.png)  
+
+![alt text](https://github.com/Weiqifan1/ImpossibleCollegeUfo/blob/developer/sentiment3.png)  
 
 #### Plot 3.  
 Make a plot which shows the number of sightings in USA per state and colour code it. Dark colour indicates many sightings and ligh colour indicates few sightings.  
